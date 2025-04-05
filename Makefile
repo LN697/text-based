@@ -11,7 +11,7 @@ SRCS = $(wildcard $(SRC_DIR)/*.cpp)
 OBJS = $(SRCS:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 TARGET = $(BIN_DIR)/game
 
-all: $(TARGET)
+all: clean $(TARGET)
 
 $(TARGET): $(OBJS) | $(BIN_DIR)
 	$(CXX) $(CXXFLAGS) $^ -o $@ $(SDL2_FLAGS)
